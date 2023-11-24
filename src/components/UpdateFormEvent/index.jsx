@@ -3,7 +3,6 @@ import { createPortal } from "react-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { validate } from "../../utility/validate";
 import {
-  addEvents,
   updateEvent,
   updateModalCLose,
 } from "../../redux/events/eventsSlice";

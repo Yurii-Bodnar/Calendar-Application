@@ -1,4 +1,4 @@
-import { createSlice, current } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import dayjs from "dayjs";
 import { v4 as uuidv4 } from "uuid";
 
@@ -6,7 +6,8 @@ const initialState = {
   date: dayjs(new Date()),
   id: uuidv4(),
   events: [],
-  eventsForUpdate: {},
+  eventsForUpdate: null,
+  eventInfo: {},
   isModalOpen: false,
   isUpdateModalOpen: false,
 };
@@ -14,14 +15,21 @@ export const eventsSlice = createSlice({
   name: "events",
   initialState,
   reducers: {
+    fetchData(state, { payload }) {
+      const data = JSON.parse(localStorage.getItem("events"));
+
+      state.events = data ? data : [];
+    },
     addEvents: (state, { payload }) => {
       const findDate = state.events.findIndex((s) => s.date === payload.date);
       if (findDate !== -1) {
         const newEvents = [...state.events];
         newEvents[findDate].events.push(payload.event);
         state.events = newEvents;
+        localStorage.setItem("events", JSON.stringify(state.events));
       } else {
         state.events.push({ date: payload.date, events: [payload.event] });
+        localStorage.setItem("events", JSON.stringify(state.events));
       }
     },
     setDate(state, action) {
@@ -33,27 +41,21 @@ export const eventsSlice = createSlice({
     modalClose(state, _) {
       state.isModalOpen = false;
     },
-    updateModalOpen(state, { payload }) {
-      state.isUpdateModalOpen = true;
-      const findDate = state.events.findIndex((el) => el.date === payload.date);
-      const eventData = [...state.events][findDate].events.find(
-        (el) => el.id === payload.id
-      );
-      state.eventsForUpdate = eventData;
-      state.isUpdateModalOpen = true;
+    setEventForUpdate(state, { payload }) {
+      state.eventsForUpdate = payload;
     },
-    updateModalCLose(state, _) {
-      state.isUpdateModalOpen = false;
-    },
+
     removeEvent(state, { payload }) {
       const findDate = state.events.findIndex((el) => el.date === payload.date);
       const newEvents = [...state.events][findDate].events.filter(
         (el) => el.id !== payload.id
       );
       state.events[findDate].events = newEvents;
+      localStorage.setItem("events", JSON.stringify(state.events));
     },
     updateEvent(state, { payload }) {
       const findDate = state.events.findIndex((el) => el.date === payload.date);
+
       const newEvents = [...state.events][findDate].events.map((el) => {
         if (el.id === payload.dataEvent.id) {
           const { title, time, description } = payload.dataEvent;
@@ -64,6 +66,10 @@ export const eventsSlice = createSlice({
       });
       state.events[findDate] = { date: payload.date, events: [...newEvents] };
       state.eventsForUpdate = {};
+      localStorage.setItem("events", JSON.stringify(state.events));
+    },
+    getInfo(state, { payload }) {
+      state.eventInfo = payload;
     },
   },
 });
@@ -76,7 +82,8 @@ export const {
   deleteItemFilteredEvents,
   removeEvent,
   updateEvent,
-  updateModalOpen,
-  updateModalCLose,
+  setEventForUpdate,
+  fetchData,
+  getInfo,
 } = eventsSlice.actions;
 export const eventsReducer = eventsSlice.reducer;

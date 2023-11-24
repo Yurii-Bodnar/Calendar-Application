@@ -4,7 +4,6 @@ import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
 import { useDispatch, useSelector } from "react-redux";
 import { selectDate } from "../../redux/events/eventsSelectors";
 import { setDate } from "../../redux/events/eventsSlice";
-import { DayCalendarSkeleton } from "@mui/x-date-pickers";
 
 const Calendar = () => {
   const date = useSelector(selectDate);

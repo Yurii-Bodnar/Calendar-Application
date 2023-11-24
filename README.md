@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+Website Description: Calendar Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to our Calendar Application! This user-friendly platform allows you to effortlessly manage your schedule and events. The key features include:
 
-## Available Scripts
+Adding Events:
+Easily schedule your activities by clicking the "Add Event" button. This intuitive function ensures a quick and straightforward process for adding new events to your calendar.
 
-In the project directory, you can run:
+Local Storage:
+All your events are securely stored in local storage, providing a seamless and reliable experience. This means that your schedule remains accessible even when you revisit the website or refresh the page.
 
-### `npm start`
+Interactive Event Handling:
+Upon adding an event, it instantly appears on the website, allowing for immediate interaction. You can perform various actions on each event, such as editing, deleting, or viewing detailed information.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Event Manipulation:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Editing: Modify the details of your events as needed. Update dates, times, or any other relevant information with just a few clicks.
+Deleting: Remove events that are no longer relevant or necessary, keeping your calendar organized and clutter-free.
+Detailed Information: Access comprehensive details about each event by simply clicking on it. This feature provides in-depth insights into the specifics of your scheduled activities.
+Our Calendar Application is designed to streamline your scheduling process and enhance your overall organization. Take control of your time and stay on top of your commitments with our user-friendly and efficient calendar solution.
 
-### `npm test`
+Installation:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. The first step is to install Node modules using the npm install command.
+2. To start the project, use the npm start command.
 
-### `npm run build`
+List of used libraries:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+@emotion/react and @emotion/styled: A popular CSS-in-JS library for styling React components.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+@mui/icons-material and @mui/material: Material-UI is a React UI framework that provides components following the Material Design guidelines.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+@mui/x-date-pickers: Additional date picker components for Material-UI.
 
-### `npm run eject`
+@reduxjs/toolkit: Toolkit for efficient Redux development, including utilities to simplify common Redux tasks.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+@testing-library/jest-dom, @testing-library/react, and @testing-library/user-event: Testing utilities for Jest and React applications.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+dayjs: A lightweight and modern JavaScript date library.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+formik: A library for building forms in React.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+react and react-dom: Core libraries for building React applications.
 
-## Learn More
+react-redux: Official React bindings for Redux, a state management library.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+react-router-dom: Library for handling routing in React applications.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+react-scripts: Scripts and configuration used by Create React App, a popular tool for setting up React projects.
 
-### Code Splitting
+redux-persist: Library for persisting Redux state across sessions.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+styled-components: A library for styling React components with tagged template literals.
 
-### Analyzing the Bundle Size
+uuid: Library for generating UUIDs.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+web-vitals: Library for measuring web performance metrics.

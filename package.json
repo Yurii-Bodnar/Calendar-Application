@@ -1,10 +1,12 @@
 {
-  "name": "myapp",
+  "name": "Calendar-Application",
+  "homepage": "https://yurii-bodnar.github.io/Calendar-Application/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.18",
     "@mui/material": "^5.14.18",
     "@mui/x-date-pickers": "^6.18.1",
     "@reduxjs/toolkit": "^1.9.7",

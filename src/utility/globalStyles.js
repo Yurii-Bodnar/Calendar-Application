@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -16,11 +16,22 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     cursor: pointer;
   }
+  p,h2{
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+  }
   ul {
     list-style: none;
   }
   button{
     cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+  main{
+    padding: 10px;
   }
 `;
 

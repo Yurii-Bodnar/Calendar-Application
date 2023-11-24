@@ -5,3 +5,4 @@ export const selectFilteredEvents = (state) => state.events.filteredEventsByDay;
 export const selectIsUpdateModalOpen = (state) =>
   state.events.isUpdateModalOpen;
 export const selectEventForUpdate = (state) => state.events.eventsForUpdate;
+export const selectEventInfo = (state)=>state.events.eventInfo
